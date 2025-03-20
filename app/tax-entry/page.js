@@ -83,7 +83,7 @@ export default function TaxEntry() {
     
     formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start'});
   };
-cb015aeef917ddc188744713bfb30d15335eafe2
+    formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start'});
 
   const resetForm = () =>
     setFormData({
@@ -205,4 +205,4 @@ cb015aeef917ddc188744713bfb30d15335eafe2
       </table>
     </div>
   );
-}
+    </div>
