@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef} from 'react';
 
 export default function TaxEntry() {
   const [formData, setFormData] = useState({
@@ -77,13 +77,11 @@ export default function TaxEntry() {
   const handleEdit = (entry) => {
     setFormData(entry);
     setIsEditing(true);
-
     
     formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start'});
   };
 
-
-  const resetForm = () =>
+  const resetForm = () => {
     setFormData({
       taxCode: '',
       taxName: '',
@@ -203,4 +201,4 @@ export default function TaxEntry() {
       </table>
     </div>
   );
-  
+}
