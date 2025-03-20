@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function TaxEntry() {
   const [formData, setFormData] = useState({
@@ -17,6 +17,8 @@ export default function TaxEntry() {
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
   const [isEditing, setIsEditing] = useState(false);
+
+  const formRef = useRef(null);
 
   // Fetch tax entries from API
   useEffect(() => {
@@ -75,7 +77,7 @@ export default function TaxEntry() {
   const handleEdit = (entry) => {
     setFormData(entry);
     setIsEditing(true);
-  };
+};
 
   const resetForm = () => {
     setFormData({
