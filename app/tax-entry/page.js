@@ -77,9 +77,15 @@ export default function TaxEntry() {
   const handleEdit = (entry) => {
     setFormData(entry);
     setIsEditing(true);
+ HEAD
 };
 
-  const resetForm = () => {
+    
+    formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start'});
+  };
+cb015aeef917ddc188744713bfb30d15335eafe2
+
+  const resetForm = () =>
     setFormData({
       taxCode: '',
       taxName: '',
@@ -100,7 +106,7 @@ export default function TaxEntry() {
       {successMessage && <div className="alert alert-success">{successMessage}</div>}
       {errorMessage && <div className="alert alert-danger">{errorMessage}</div>}
 
-      <form className="bg-light p-4 rounded shadow-sm">
+      <form ref={formRef} className="bg-light p-4 rounded shadow-sm">
         <div className="row g-2">
           <div className="col-md-6">
             <label className="form-label">Tax Code</label>
