@@ -76,11 +76,11 @@ export default function TaxEntry() {
 
   const handleEdit = (entry) => {
     setFormData(entry);
-    setIsEditing(true);
-    
+    setIsEditing(true);    
     formRef.current.scrollIntoView({ behavior: 'smooth', block: 'start'});
   };
- 
+
+
   const resetForm = () => {
     setFormData({
       taxCode: '',
