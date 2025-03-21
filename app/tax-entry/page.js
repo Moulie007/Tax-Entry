@@ -97,7 +97,6 @@ export default function TaxEntry() {
   return (
     <div className="container text-center mt-4">
       <h1 className="mb-4">Tax Entry</h1>
-  <h3>Do not change this line</h5>
   
 
       {successMessage && <div className="alert alert-success">{successMessage}</div>}
